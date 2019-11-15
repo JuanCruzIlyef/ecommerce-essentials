@@ -1,44 +1,44 @@
 <?php
-class usuario {
-  private $nombre;
+class Usuario {
+  private $name;
   private $mail;
-  private $contraseña;
+  private $password;
   private $avatar;
 
-  public function__constructor($nombreUsuario, $mailUsuario, $contraseñaUsuarieruo, $avatarUsuario){
-  $this-> nombre = $nombreUsuario;
+  public function __construct($nameUsuario, $mailUsuario, $passwordUsuario, $avatarUsuario){
+  $this-> name = $nameUsuario;
   $this-> mail = $mailUsuario;
-  $this-> contraseña = $contraseñaUsuario;
-  $this-> avatar = $avatarUsuarios;
+  $this-> contraseña = $passwordUsuario;
+  $this-> avatar = $avatarUsuario;
 }
 
 public function getNombre(){
-  return $this->nombre;
+  return $this->name;
 }
 
 public function getMail(){
   return $this->mail;
 }
 
-public function getContraseña(){
-  return $this->contraseña;
+public function getPassword(){
+  return $this->password;
 }
 
 public function getAvatar(){
   return $this->avatar;
 }
-public function setNombre($nombre){
- $this->nombre = $nombre;
+public function setName($name){
+ $this->name = $name;
 }
 
 public function setMail($mail){
   $this->mail = $mail;
 }
-public function setPass($contraseña){
-  $this->pass =$this->encriptarPass($contraseña);
+public function setPass($password){
+  $this->pass =$this->encriptarPass($password);
 }
-private function encriptarPass($contraseña){
-  return password_hash($contraseña, PASSWORD_DEFAULT);
+private function encriptarPass($password){
+  return password_hash($password, PASSWORD_DEFAULT);
 }
 public function setAvatar($avatar){
   $this->avatar = $avatar;
