@@ -14,13 +14,13 @@ class Carrito {
   public function getProducto(){
     return $this->producto;
   }
-  public function setProducto(){
+  public function setProducto($producto){
     $this->producto = $producto;
   }
   public function getCantidad(){
     return $this->cantidad;
   }
-  public function setCantidad(){
+  public function setCantidad($cantidad){
     $this->cantidad = $cantidad;
   }
   public function sumarTotal($precio){
