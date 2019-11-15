@@ -1,10 +1,24 @@
 <?php
 
-include("producto.php");
-
 class Carrito {
-  protected $producto;
-  protected $cantidad;
+  private $items = [];
+
+  public function addProduct(Producto $producto, int $qty = 1){
+    $item = new Item;
+    $item->setProduct($producto);
+    $item->setQty($qty);
+
+    $this->items[] = $item;
+  }
+
+  public function getTotal(){
+    $total = 0;
+    foreach ($this->items as $item){
+      $total = $total + $item->getTotal();
+    }
+    return $total;
+  }
+}
 
   public function __construct($producto, $cantidad){
     $this->producto = $producto;
@@ -14,8 +28,9 @@ class Carrito {
   public function getProducto(){
     return $this->producto;
   }
-  public function setProducto($producto){
+  public function setProducto(producto $producto){
     $this->producto = $producto;
+    // hacerlo array!!!
   }
   public function getCantidad(){
     return $this->cantidad;
@@ -27,7 +42,7 @@ class Carrito {
 // METODOS
   public function sumarTotal(){
     foreach ($precio as $precios) {
-     
+
     }
   }
 
