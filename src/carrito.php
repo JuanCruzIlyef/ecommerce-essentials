@@ -10,7 +10,7 @@ class Carrito {
     $this->producto = $producto;
     $this->cantidad = $cantidad;
   }
-
+// ATRIBUTOS
   public function getProducto(){
     return $this->producto;
   }
@@ -23,8 +23,12 @@ class Carrito {
   public function setCantidad($cantidad){
     $this->cantidad = $cantidad;
   }
-  public function sumarTotal($precio){
-    return $this->precio
+
+// METODOS
+  public function sumarTotal(){
+    foreach ($precio as $precios) {
+     
+    }
   }
 
 
