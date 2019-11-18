@@ -12,7 +12,7 @@ class Usuario {
   $this-> avatar = $avatarUsuario;
 }
 
-public function getNombre(){
+public function getName(){
   return $this->name;
 }
 
