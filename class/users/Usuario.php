@@ -1,7 +1,12 @@
 <?php
+<<<<<<< HEAD:class/users/Usuario.php
 class User implements JsonSerializable
 {
   private $name;
+=======
+class Usuario {
+  private $nombre;
+>>>>>>> 31b6bb9d3d9971229fd78638898ed8ee88a8e204:src/Usuario.php
   private $mail;
   private $password;
   private $avatar;
@@ -10,6 +15,7 @@ class User implements JsonSerializable
   $this->name = $name;
   $this->mail = $mail;
   $this->password = $this->encriptarPass($password);
+
 }
 
 public function getName(){
