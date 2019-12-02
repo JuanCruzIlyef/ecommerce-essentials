@@ -18,13 +18,10 @@ class Carrito {
     }
     return $total;
   }
-}
 
-  public function __construct($producto, $cantidad){
-    $this->producto = $producto;
-    $this->cantidad = $cantidad;
-  }
-// ATRIBUTOS
+
+
+// ATRIBUTOS // 
   public function getProducto(){
     return $this->producto;
   }
@@ -45,17 +42,17 @@ class Carrito {
 
     }
   }
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
