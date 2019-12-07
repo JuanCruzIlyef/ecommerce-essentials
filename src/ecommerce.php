@@ -1,42 +1,75 @@
 <?php
 
-class Ecommerce{
-  private $carrito;
-  private $usuario;
-  private $catalogo = [];
+require_once 'producto.php';
 
-  public function __contruct(){
-    $this->carrito = new Carrito;
-  }
 
-  public function getProducts(){
-    for ($i = 0; $i < rand(20, 30); $i++){
-      $producto = new Producto;
-      $producto->setPrice(rand(99, 1000));
-      $catalogo[] = $producto;
+
+class Ecommerce
+{
+    private $carrito;
+
+    private $usuario;
+
+    private $catalogo = [];
+
+    public function __construct()
+    {
+        $this->carrito = new Carrito;
+        $this->catalogo = [
+          new Producto (1,459.99,'Aclarante'),
+          new Producto (2,499.99,'Tonificante'),
+          new Producto (3,469.99,'Jabon'),
+      ];
+
     }
-    return $this->catalogo;
-  }
-  public function addProducto(Producto $producto, int $qty = 1){
-    $this->$carrito->addProducto($producto, 3);
-  }
-public function findProduct(int $id){
-    foreach ($this->catalogo as $product){
-      if ($producto->getId() === $id){
-        return $product;
-      }
-    }
-  }
-  public function register(array $data){ //email password etc
-    //creo un usuario
-  }
 
-  public function login(array $data){
-    // guarda sesion
-  }
+
+
+    public function searchProducts($query){
+
+        $results= [];
+
+        foreach($this->catalogo as $product){
+
+        //stripos - busca si un string contiene otro string
+            if(stripos ($product->getTitle(), $query) !== false ) {
+                $results[] = $product;
+            }
+        }
+
+        return $results;
+
+    }
+
+    public function getCatalog()
+    {
+
+        return $this->catalogo;
+    }
+
+    public function addProduct(Product $product, int $qty = 1)
+    {
+        $this->carrito->addProduct($product, 3);
+    }
+
+    public function findProduct(int $id)
+    {
+        foreach ($this->catalogo as $product) {
+            if ($product->getId() === $id) {
+                return $product;
+            }
+        }
+     }
+
+    public function register(array $data)
+    {
+        // creo un usuario
+    }
+
+    public function login(array $data)
+    {
+        // guarda en sesion
+    }
 }
 
-
-
-
- ?>
+?>

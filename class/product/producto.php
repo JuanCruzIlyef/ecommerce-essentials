@@ -1,100 +1,107 @@
 <?php
 
 
-class productos {
+class Producto {
 
-private $nombre;
 private $id;
+private $nombre;
 private $categoria;
 private $stock;
 private $descripcion;
-private $precio;
+private $price;
 private $imgen;
 private $calificacion;
+private $title;
 
 
-public function __construct($nombre,$id,$categoria,$stock,$descripcion,$precio,$imgen,$calificacion)
+public function __construct($id,$price,$title,$calificacion = 4)
 {
-  $this->nombre = $nombre;
-  $this->nombre = $id;
-  $this->nombre = $categoria;
-  $this->nombre = $stock;
-  $this->nombre = $descripcion;
-  $this->nombre = $precio;
-  $this->nombre = $imagen;
-  $this->nombre = $calificacion;
 
-}
- public function setNombre ($value){
-     $this->nombre = $value["nombre"];
- }
- public function getNombre (){
-     return $this->nombre:
- }
+  $this->id = $id;
 
- public function setNombre ($value){
-     $this->nombre = $value["id"];
- }
- public function getNombre (){
-     return $this->id:
- }
+  $this->price = $price;
 
- public function setNombre ($value){
-     $this->nombre = $value["categoria"];
- }
- public function getNombre (){
-     return $this->categoria:
- }
+  $this->title= $title;
 
- public function setNombre ($value){
-     $this->nombre = $value["stock"];
- }
- public function getNombre (){
-     return $this->stock:
- }
-
- public function setNombre ($value){
-     $this->nombre = $value["descripcion"];
- }
- public function getNombre (){
-     return $this->descripcion:
- }
-
- public function setNombre ($value){
-     $this->nombre = $value["precio"];
- }
- public function getNombre (){
-     return $this->precio:
- }
- public function setNombre ($value){
-     $this->nombre = $value["imagen"];
- }
- public function getNombre (){
-     return $this->imagen:
- }
-
- public function setNombre ($value){
-     $this->nombre = $value["calificacion"];
- }
- public function getNombre (){
-     return $this->calificacion:
- }
-
-
-
-
-      <?php foreach ($productos as $producto){
-             if ($producto["id"] == $id) {
-               return $producto;
-             }
-           }
-
-           return
-
-           ?>
-
+  $this->calificacion = $calificacion;
 
 }
 
+
+public function setTitle(string $title){
+    $this->title = $title;
+
+    return $this;
+}
+
+public function getTitle(){
+    return $this->title;
+}
+
+ public function setNombre ($nombre){
+     $this->nombre = $nombre["nombre"];
+ }
+ public function getNombre (){
+     return $this->nombre;
+ }
+
+ public function setId ($id){
+     $this->id = $id["id"];
+ }
+ public function getId (){
+     return $this->id;
+ }
+
+ public function setCategoria ($categoria){
+     $this->categoria = $categoria["categoria"];
+ }
+ public function getCategoria (){
+     return $this->categoria;
+ }
+
+ public function setStock ($stock){
+     $this->stock = $stock["stock"];
+ }
+ public function getStock (){
+     return $this->stock;
+ }
+
+ public function setDescripcion ($descripcion){
+     $this->descripcion = $desripcion["descripcion"];
+ }
+ public function getDescripcion (){
+     return $this->descripcion;
+ }
+
+
+ public function setPrice(float $price)
+ {
+     $this->price = $price;
+
+     return $this;
+ }
+
+ public function getPrice()
+ {
+     return $this->price;
+ }
+
+
+ public function setImagen ($imagen){
+     $this->imagen = $imagen["imagen"];
+ }
+ public function getImagen (){
+     return $this->imagen;
+ }
+
+ public function setCalificacion ($calificacion){
+     $this->calificacion = $calificacion;
+     return $this;
+ }
+ public function getCalificacion (){
+     return $this->calificacion;
+ }
+
+}
 
  ?>

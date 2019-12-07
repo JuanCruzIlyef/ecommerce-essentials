@@ -57,7 +57,7 @@ array asociativo y un foreach
 
 
     <article class="col-10 mx-auto p-0 col-md-4 text-center my-3  border border-dark">
-      <img src="imagen-mkt/face-cream.jpg" class="img-fluid" alt="">
+      <img src="https://image.freepik.com/vector-gratis/fondo-realista-cosmeticos-productos-belleza_79603-605.jpg" class="img-fluid" alt="">
 
       <section class= "articulos-ecommerce bg-white">
       <div class= "title-box py-5px">
@@ -106,7 +106,7 @@ array asociativo y un foreach
     </article>
 
     <article class="col-10 mx-auto p-0 col-md-4 text-center my-3  border border-dark">
-      <img src="assets/publicidad7.jpg" class="img-fluid" alt="">
+      <img src="https://image.freepik.com/vector-gratis/vector-crema-diaria-tarro-fondo-cosmetico_1441-2913.jpg" class="img-fluid" alt="">
 
       <section class= "articulos-ecommerce bg-white">
       <div class= "title-box py-5px">
@@ -153,5 +153,5 @@ array asociativo y un foreach
 
     </article>
 
-    
+
 <!--finaliza LISTADO DE PRODUCTOS-->

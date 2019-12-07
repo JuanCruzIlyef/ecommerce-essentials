@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +14,19 @@
 <div class="container">
     <div class="row">
         <div class="col">
-        
+
 <h1><?= $title ?></h1>
 
   <ul>
       <?php foreach($catalog as $product): ?>
 
         <li>
-        
+
 
         <div class="card" style="width: 18rem;" >
 <a href="?action=products_list&producto=item">
         <img src="https://thefruitcompany.es/wp-content/uploads/2018/06/TFC_Cosmetica_Crema_de_manos_Pi%C3%B1a.png"class="card-img-top" alt="...">
-</a> 
+</a>
 
 <div class="card-body">
 
@@ -43,7 +44,7 @@
 
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-        
+
 
  <form action="?action=product-detail" method="post">
     <input type="hidden" name="id" value="<?= $product->getId()?>">
@@ -54,8 +55,8 @@
 
 </div>
 </div>
-    <?php endforeach ?>
-    
+<?php endforeach ;?>
+
     </ul>
 
 
